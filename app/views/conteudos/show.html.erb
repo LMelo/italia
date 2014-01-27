@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Titulo:</b>
+  <%= @conteudo.titulo %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= @conteudo.link %>
+</p>
+
+<p>
+  <b>Texto:</b>
+  <%= @conteudo.texto %>
+</p>
+
+<p>
+  <b>Ativo:</b>
+  <%= @conteudo.ativo %>
+</p>
+
+<p>
+  <b>Tipo:</b>
+  <%= @conteudo.tipo %>
+</p>
+
+
+<%= link_to 'Edit', edit_conteudo_path(@conteudo) %> |
+<%= link_to 'Back', conteudos_path %>

@@ -1,4 +1,13 @@
 Italia::Application.routes.draw do
+  get "premio/descricao"
+
+  get "home/index"
+
+  resources :conteudos
+
+  root :to => "home#index"
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
