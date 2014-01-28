@@ -1,4 +1,6 @@
 Italia::Application.routes.draw do
+  get "noticia/lista"
+
   get "premio/descricao"
 
   get "home/index"

@@ -9,12 +9,16 @@
 <body>
 
 <div class="container">
+
   <div class="row clearfix">
-    <div class="col-md-2 column">
-      <img alt="rails" class="img-thumbnail"
-           src="https://wac.a8b5.edgecastcdn.net/80A8B5/achievement-images/badges_SimpleFacebook_Stage1.png">
+    <div class="col-md-12 column">
+      <img alt="Rails" height="250px" width="1140px"
+           src="http://blog.qio.me/wp-content/uploads/2012/09/ruby-on-rails.png">
     </div>
-    <div class="col-md-10 column">
+  </div>
+
+  <div class="row clearfix">
+    <div class="col-md-12 column">
       <nav class="navbar navbar-default navbar-inverse" role="navigation">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -23,29 +27,36 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">Home</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li><a href="/premio/descricao">Prêmio</a></li>
-            <li><a href="#">Notícias</a></li>
-            <li><a href="#">Inscrições</a></li>
-            <li><a href="#">Edital/Regulamento</a></li>
-            <li><a href="#">Fotos</a></li>
-            <li><a href="#">Dúvidas/Perguntas</a></li>
+          <ul class="nav nav-justified">
+            <li><a class="navbar-brand" href="/">Home</a></li>
+            <li><a class="navbar-brand" href="/premio/descricao">Prêmio</a></li>
+            <li><a class="navbar-brand" href="/noticias/lista">Notícias</a></li>
+            <li><a class="navbar-brand" href="#">Inscrições</a></li>
+            <li><a class="navbar-brand" href="#">Edital/Regulamento</a></li>
+            <li><a class="navbar-brand" href="#">Fotos</a></li>
+            <li><a class="navbar-brand" href="#">Dúvidas/Perguntas</a></li>
           </ul>
         </div>
 
       </nav>
     </div>
   </div>
+
   <div class="row clearfix">
     <div class="col-md-12 column">
       <%= yield %>
     </div>
   </div>
 </div>
+
+</div>
+
+
+
+
 
 <div class="container">
   <div class="row clearfix">
