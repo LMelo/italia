@@ -11,18 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140127124443) do
+ActiveRecord::Schema.define(:version => 20140128153759) do
 
   create_table "conteudos", :force => true do |t|
     t.string   "titulo"
-    t.string   "link"
-    t.text     "texto"
+    t.string   "resumo"
+    t.text     "descricao"
+    t.datetime "data_publicacao"
     t.boolean  "ativo"
     t.string   "tipo"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
-  add_index "conteudos", ["tipo"], :name => "index_conteudos_on_tipo"
+  add_index "conteudos", ["data_publicacao"], :name => "index_conteudos_on_data_publicacao"
 
 end

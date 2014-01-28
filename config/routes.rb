@@ -1,12 +1,12 @@
 Italia::Application.routes.draw do
+  resources :conteudos
+
+
   get "noticia/lista"
 
   get "premio/descricao"
 
   get "home/index"
-
-  resources :conteudos
-
   root :to => "home#index"
 
 

@@ -18,7 +18,7 @@ class ConteudosControllerTest < ActionController::TestCase
 
   test "should create conteudo" do
     assert_difference('Conteudo.count') do
-      post :create, conteudo: { ativo: @conteudo.ativo, link: @conteudo.link, texto: @conteudo.texto, tipo: @conteudo.tipo, titulo: @conteudo.titulo }
+      post :create, conteudo: { ativo: @conteudo.ativo, data_publicacao: @conteudo.data_publicacao, descricao: @conteudo.descricao, resumo: @conteudo.resumo, tipo: @conteudo.tipo, titulo: @conteudo.titulo }
     end
 
     assert_redirected_to conteudo_path(assigns(:conteudo))
@@ -35,7 +35,7 @@ class ConteudosControllerTest < ActionController::TestCase
   end
 
   test "should update conteudo" do
-    put :update, id: @conteudo, conteudo: { ativo: @conteudo.ativo, link: @conteudo.link, texto: @conteudo.texto, tipo: @conteudo.tipo, titulo: @conteudo.titulo }
+    put :update, id: @conteudo, conteudo: { ativo: @conteudo.ativo, data_publicacao: @conteudo.data_publicacao, descricao: @conteudo.descricao, resumo: @conteudo.resumo, tipo: @conteudo.tipo, titulo: @conteudo.titulo }
     assert_redirected_to conteudo_path(assigns(:conteudo))
   end
 

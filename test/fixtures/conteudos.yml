@@ -2,14 +2,16 @@
 
 one:
   titulo: MyString
-  link: MyString
-  texto: MyText
+  resumo: MyString
+  descricao: MyText
+  data_publicacao: 2014-01-28 13:37:59
   ativo: false
   tipo: MyString
 
 two:
   titulo: MyString
-  link: MyString
-  texto: MyText
+  resumo: MyString
+  descricao: MyText
+  data_publicacao: 2014-01-28 13:37:59
   ativo: false
   tipo: MyString

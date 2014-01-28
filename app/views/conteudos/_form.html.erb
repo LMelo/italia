@@ -1,12 +1,13 @@
-<%= simple_form_for(@conteudo, :html => { :class => 'form form-horizontal' }) do |f| %>
+<%= simple_form_for(@conteudo, html: {class: "form-horizontal"}) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
     <%= f.input :titulo %>
-    <%= f.input :link %>
-    <%= f.input :texto %>
+    <%= f.input :data_publicacao %>
     <%= f.input :ativo %>
-    <%= f.input :tipo %>
+    <%= f.input :tipo, collection: helper_conteudo_tipo_colletion %>
+    <%= f.input :resumo %>
+    <%= f.input :descricao %>
   </div>
 
   <div class="form-actions">
