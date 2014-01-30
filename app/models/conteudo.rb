@@ -7,7 +7,7 @@ class Conteudo < ActiveRecord::Base
 
   attr_accessible :ativo, :data_publicacao, :descricao, :resumo, :tipo, :titulo, :foto
 
-  has_attached_file :foto, styles: { medium: "300x300>", thumb: "600x200>" }
+  has_attached_file :foto, styles: { medium: "300x300>", thumb: "100x100<" }
 
   # VALIDACOES
   validates_presence_of :titulo, :descricao, :tipo, :data_publicacao
