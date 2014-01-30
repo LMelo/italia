@@ -1,5 +1,5 @@
 <% cont = 0 %>
-<% conteudo_noticias.each do |noticia| %>
+<% conteudo_noticias.order_by_data_publicacao.each do |noticia| %>
 
     <% row_open = cont == 0 %>
     <% row_end = cont == 2 %>

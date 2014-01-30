@@ -1,9 +1,5 @@
 module NoticiaHelper
 
-  def helper_noticia_tipo_colletion
-    Conteudo.get_tipo_colletion
-  end
-
   def helper_noticia_show_thumbnail(noticia)
     render "noticia/thumbnail", :noticia => noticia
   end
