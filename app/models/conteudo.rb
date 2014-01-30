@@ -5,12 +5,13 @@ class Conteudo < ActiveRecord::Base
 
   @@premio, @@noticia, @@edital = TIPOS
 
-  attr_accessible :ativo, :data_publicacao, :descricao, :resumo, :tipo, :titulo
+  attr_accessible :ativo, :data_publicacao, :descricao, :resumo, :tipo, :titulo, :foto
+
+  has_attached_file :foto, styles: { medium: "300x300>", thumb: "600x200>" }
 
   # VALIDACOES
   validates_presence_of :titulo, :descricao, :tipo, :data_publicacao
   validates :tipo, inclusion: {in: TIPOS}
-
 
   after_initialize :default_values, :if => :new_record?
 

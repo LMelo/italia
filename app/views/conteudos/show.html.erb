@@ -30,6 +30,11 @@
   <%= @conteudo.tipo %>
 </p>
 
+<p>
+  <b>Foto:</b>
+  <%= image_tag(@conteudo.foto.url(:thumb)) %>
+</p>
+
 
 <%= link_to 'Edit', edit_conteudo_path(@conteudo) %> |
 <%= link_to 'Back', conteudos_path %>

@@ -19,13 +19,14 @@
     <td><%= conteudo.data_publicacao %></td>
     <td><%= conteudo.ativo %></td>
     <td><%= conteudo.tipo %></td>
-    <td><%= link_to 'Show', conteudo %></td>
-    <td><%= link_to 'Edit', edit_conteudo_path(conteudo) %></td>
-    <td><%= link_to 'Destroy', conteudo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show', conteudo, class: "btn btn-default" %></td>
+    <td><%= link_to 'Edit', edit_conteudo_path(conteudo), class: "btn btn-default" %></td>
+    <td><%= link_to 'Destroy', conteudo, method: :delete,
+                    data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Conteudo', new_conteudo_path %>
+<%= link_to 'New Conteudo', new_conteudo_path, class: "btn btn-primary" %>

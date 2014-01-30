@@ -80,4 +80,9 @@ class ConteudosController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  #def conteudo_params
+    #params.require(:conteudo).permit(:ativo, :data_publicacao, :descricao, :foto, :resumo, :tipo, :titulo)
+  #end
+
 end
