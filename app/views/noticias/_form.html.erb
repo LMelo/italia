@@ -1,24 +1,18 @@
-<%= simple_form_for(@conteudo, html: {class: "form form-horizontal", multipart: true}) do |f| %>
+<%= simple_form_for(@noticia) do |f| %>
   <%= f.error_notification %>
-
-    <% @conteudo.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-    <% end %>
 
   <div class="form-inputs">
     <%= f.input :titulo %>
+    <%= f.input :resumo %>
     <%= f.input :data_publicacao %>
     <%= f.input :ativo %>
-    <%= f.input :tipo, collection: helper_conteudo_tipo_colletion %>
-    <%= f.input :resumo %>
     <div class="control-group">
       <%= f.label :foto %>
       <div class="controls">
         <%= f.file_field :foto %>
       </div>
     </div>
-    <%= f.input :descricao %>
-
+    <%= f.input :conteudo, input_html: {:style => 'width: 1142px'} %>
   </div>
 
   <div class="form-actions">

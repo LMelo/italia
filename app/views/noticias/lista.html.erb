@@ -1,0 +1,7 @@
+<h1>Notícias</h1>
+<hr/>
+
+<% noticias = Noticia.all %>
+<% if noticias %>
+    <%= helper_noticia_list_thumbnail(noticias) %>
+<% end %>

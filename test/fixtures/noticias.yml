@@ -3,15 +3,13 @@
 one:
   titulo: MyString
   resumo: MyString
-  descricao: MyText
-  data_publicacao: 2014-01-28 13:37:59
+  data_publicacao: 2014-01-30 13:19:56
   ativo: false
-  tipo: MyString
+  conteudo: MyText
 
 two:
   titulo: MyString
   resumo: MyString
-  descricao: MyText
-  data_publicacao: 2014-01-28 13:37:59
+  data_publicacao: 2014-01-30 13:19:56
   ativo: false
-  tipo: MyString
+  conteudo: MyText

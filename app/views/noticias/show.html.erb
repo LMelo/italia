@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row clearfix">
+    <div class="col-md-8 column">
+      <small><%= @noticia.data_publicacao %></small>
+      <h2><%= @noticia.titulo %></h2>
+      <hr/>
+      <em class="muted">
+        <p>
+          <%= @noticia.resumo %>
+        </p>
+      </em>
+    </div>
+    <div class="col-md-4 column">
+      <%= image_tag(@noticia.foto.url, height: "200px;", width: "200px;") %>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row clearfix">
+    <div class="col-md-12">
+      <p>
+        <%= @noticia.conteudo %>
+      </p>
+    </div>
+  </div>
+</div>
+
+<hr/>
+
+<div>
+  <ul class="pager pagination-lg">
+    <li><%= link_to("Primeira ", @noticia.primeira_noticia) %></li>
+    <li><%= link_to("< Anterior", @noticia.anterior_noticia) if @noticia.anterior_noticia %></li>
+    <li><%= link_to("Próxima >", @noticia.proxima_noticia) if @noticia.proxima_noticia %></li>
+    <li><%= link_to("Última ", @noticia.ultima_noticia) %></li>
+  </ul>
+</div>
+
+
+
+<%= link_to 'Edit', edit_noticia_path(@noticia) %> |
+<%= link_to 'Back', noticias_path %>

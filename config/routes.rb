@@ -1,8 +1,16 @@
 Italia::Application.routes.draw do
+  resources :noticias do
+    collection do
+      get "lista"
+    end
+
+  end
+
+  #get "noticias/lista" => "noticias#lista"
+
+
   resources :conteudos
 
-
-  get "noticia/lista"
 
   get "premio/descricao"
 

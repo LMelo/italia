@@ -11,15 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140128173105) do
+ActiveRecord::Schema.define(:version => 20140130162254) do
 
-  create_table "conteudos", :force => true do |t|
+  create_table "noticias", :force => true do |t|
     t.string   "titulo"
     t.string   "resumo"
-    t.text     "descricao"
     t.datetime "data_publicacao"
     t.boolean  "ativo"
-    t.string   "tipo"
+    t.text     "conteudo"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
     t.string   "foto_file_name"
@@ -27,7 +26,5 @@ ActiveRecord::Schema.define(:version => 20140128173105) do
     t.integer  "foto_file_size"
     t.datetime "foto_updated_at"
   end
-
-  add_index "conteudos", ["data_publicacao"], :name => "index_conteudos_on_data_publicacao"
 
 end
