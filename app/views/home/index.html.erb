@@ -15,4 +15,5 @@
 </div>
 
 <h1>Notícias</h1>
+<%= helper_noticia_list_thumbnail(Noticia.order_by_data_publicacao.limit(3)) %>
 <hr/>

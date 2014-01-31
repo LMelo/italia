@@ -11,14 +11,16 @@
       </em>
     </div>
     <div class="col-md-4 column">
-      <%= image_tag(@noticia.foto.url, height: "200px;", width: "200px;") %>
+      <% if @noticia.foto.exists? %>
+        <%= image_tag(@noticia.foto.url, height: "200px;", width: "200px;") %>
+      <% end %>
     </div>
   </div>
 </div>
 <div class="container">
   <div class="row clearfix">
     <div class="col-md-12">
-      <p>
+      <p class="well">
         <%= @noticia.conteudo %>
       </p>
     </div>
@@ -29,10 +31,10 @@
 
 <div>
   <ul class="pager pagination-lg">
-    <li><%= link_to("Primeira ", @noticia.primeira_noticia) %></li>
-    <li><%= link_to("< Anterior", @noticia.anterior_noticia) if @noticia.anterior_noticia %></li>
-    <li><%= link_to("Próxima >", @noticia.proxima_noticia) if @noticia.proxima_noticia %></li>
-    <li><%= link_to("Última ", @noticia.ultima_noticia) %></li>
+    <li><%= link_to("Última", @noticia.ultima_noticia) %></li>
+    <li><%= link_to("< Próxima", @noticia.proxima_noticia) if @noticia.proxima_noticia %></li>
+    <li><%= link_to("Anterior >", @noticia.anterior_noticia) if @noticia.anterior_noticia %></li>
+    <li><%= link_to("Primeira", @noticia.primeira_noticia) %></li>
   </ul>
 </div>
 

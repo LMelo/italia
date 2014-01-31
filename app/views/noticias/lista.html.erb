@@ -1,7 +1,6 @@
-<h1>Notícias</h1>
+<h2>Notícias</h2>
 <hr/>
 
-<% noticias = Noticia.all %>
-<% if noticias %>
-    <%= helper_noticia_list_thumbnail(noticias) %>
-<% end %>
+
+<%= helper_noticia_list_thumbnail(Noticia) %>
+
