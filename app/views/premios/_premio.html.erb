@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row clearfix">
+    <div class="col-md-8 column">
+      <h2><%= premio_detalhe.titulo %></h2>
+      <hr/>
+      <em class="muted">
+        <p>
+          <%= premio_detalhe.resumo %>
+        </p>
+      </em>
+    </div>
+    <div class="col-md-4 column">
+      <% if premio_detalhe.foto.exists? %>
+          <%= image_tag(premio_detalhe.foto.url, height: "#{altura}px", width: "#{largura}px") %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row clearfix">
+    <div class="col-md-12">
+      <p class="well">
+        <% premio_detalhe.descricao.split("\n").each do |t| %>
+            <%= t %><br>
+        <% end %>
+      </p>
+    </div>
+  </div>
+</div>

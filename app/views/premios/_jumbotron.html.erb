@@ -1,0 +1,18 @@
+<% if premio.count > 0 %>
+    <div class="jumbotron">
+        <% premio.each do |p| %>
+         <!-- style="background: url(https://mispy.me/images/gradientoverlay.png); -->
+          <h1>
+            Sobre <%= p.titulo %>
+          </h1>
+
+          <p>
+            <%= p.resumo %>
+          </p>
+
+          <p>
+            <%= link_to "Leia mais", p, class: "btn btn-primary btn-large" %>
+          </p>
+        <% end %>
+    </div>
+<% end %>

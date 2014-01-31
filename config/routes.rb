@@ -1,4 +1,11 @@
 Italia::Application.routes.draw do
+  resources :premios do
+    collection do
+      get "descricao"
+    end
+  end
+
+
   resources :noticias do
     collection do
       get "lista"

@@ -1,0 +1,32 @@
+<h1>Listing premios</h1>
+
+<table class="table table-condensed">
+  <thead>
+      <tr>
+        <th>Titulo</th>
+        <th>Resumo</th>
+        <th>Ativo</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <% @premios.each do |premio| %>
+          <tr>
+            <td><%= premio.titulo %></td>
+            <td><%= premio.resumo %></td>
+            <td><%= premio.ativo %></td>
+            <td><%= link_to 'Show', premio %></td>
+            <td><%= link_to 'Edit', edit_premio_path(premio) %></td>
+            <td><%= link_to 'Destroy', premio, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+          </tr>
+      <% end %>
+  </tbody>
+
+
+</table>
+
+<br/>
+
+<%= link_to 'New Premio', new_premio_path %>

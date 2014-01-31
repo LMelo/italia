@@ -1,18 +1,4 @@
-<div class="jumbotron"> <!-- style="background: url(https://mispy.me/images/gradientoverlay.png); -->
-  <h1>
-    Sobre Ruby on Rails
-  </h1>
-
-  <p>
-    É incrível por estar diminuindo as barreiras para entrar no mundo da programação. Aplicações web
-    poderosas que geralmente demoram semanas ou meses para serem desenvolvidas agora necessitam somente de uma questão
-    de dias.
-  </p>
-
-  <p>
-    <a class="btn btn-primary btn-large" href="/premio/descricao">Leia mais</a>
-  </p>
-</div>
+<%= helper_premio_jumbotron(Premio.where_ativo) %>
 
 <h1>Notícias</h1>
 <%= helper_noticia_list_thumbnail(Noticia.order_by_data_publicacao.limit(3)) %>

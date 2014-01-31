@@ -1,0 +1,10 @@
+<h2>Premio</h2>
+<% premios = Premio.where_ativo.all %>
+<% if premios.count < 0 %>
+    <h2>Não prêmio cadastrado</h2>
+<% else %>
+    <% premios.each do |p| %>
+        <br/>
+        <%= helper_premio_detalhe(p) %>
+    <% end %>
+<% end %>

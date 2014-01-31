@@ -1,0 +1,20 @@
+<%= simple_form_for(@premio) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :titulo %>
+    <%= f.input :resumo %>
+    <%= f.input :ativo %>
+    <div class="control-group">
+      <%= f.label :foto %>
+      <div class="controls">
+        <%= f.file_field :foto %>
+      </div>
+    </div>
+    <%= f.input :descricao %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
