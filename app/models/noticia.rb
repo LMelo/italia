@@ -1,12 +1,13 @@
+# encoding: utf-8
 class Noticia < ActiveRecord::Base
 
   attr_accessible :ativo, :data_publicacao, :resumo, :titulo, :foto, :conteudo
 
-  has_attached_file :foto, styles: { medium: "300x300>", thumb: "100x100<" }
+  has_attached_file :foto, styles: { medium: "300x300>", thumb: "150x150<" }
 
   # VALIDACOES
   validates_presence_of :titulo, :conteudo, :data_publicacao
-
+  validates :resumo, length: {maximum: 200, too_long: "Limite de caracteres deve ser %{count}"}
   after_initialize :default_values, :if => :new_record?
 
   # SCOPES
