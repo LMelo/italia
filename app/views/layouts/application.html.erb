@@ -38,8 +38,7 @@
             <li><a class="navbar-brand" href="#">Edital/Regulamento</a></li>
             <li><a class="navbar-brand" href="#">Fotos</a></li>
             <li><a class="navbar-brand" href="#">Dúvidas/Perguntas</a></li>
-            <li></li>
-            <li></li>
+            <!--<li><a class="navbar-brand" href="#"><img src="assets/login_black.png" alt="Entrar" title="Entrar"></a></li>-->
           </ul>
         </div>
 
@@ -49,18 +48,17 @@
 
   <div class="container">
     <div class="row clearfix">
-      <div class="col-md-12 column">
+      <div class="col-md-10 column">
         <ul class="breadcrumb">
           <li>
             <p>Administração >> </p>
           </li>
-          <li>
-            <%= link_to "Premios", premios_path %> <span class="divider">/</span>
-          </li>
-          <li>
-            <%= link_to "Noticias", noticias_path %> <span class="divider">/</span>
-          </li>
+          <li><%= link_to "Premios", premios_path %> <span class="divider">/</span></li>
+          <li><%= link_to "Noticias", noticias_path %> <span class="divider">/</span></li>
         </ul>
+      </div>
+      <div class="col-md-2 column">
+        <a href="#"><img src="/assets/logout_black.png" height="48px" width="48px" alt="Sair" title="Sair"></a>
       </div>
     </div>
   </div>
