@@ -1,6 +1,5 @@
 <h2>Notícias</h2>
 <hr/>
 
-
-<%= helper_noticia_list_thumbnail(Noticia) %>
+<%= helper_noticia_list_thumbnail(Noticia.order_by_data_publicacao.all) %>
 

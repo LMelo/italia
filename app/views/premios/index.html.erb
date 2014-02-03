@@ -1,5 +1,7 @@
 <h1>Listing premios</h1>
 
+<%= link_to 'New Premio', new_premio_path, class: helper_app_btn_new %>
+<br/>
 <table class="table table-condensed">
   <thead>
       <tr>
@@ -17,16 +19,13 @@
             <td><%= premio.titulo %></td>
             <td><%= premio.resumo %></td>
             <td><%= premio.ativo %></td>
-            <td><%= link_to 'Show', premio %></td>
-            <td><%= link_to 'Edit', edit_premio_path(premio) %></td>
-            <td><%= link_to 'Destroy', premio, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+            <td><%= link_to 'Show', premio, class: helper_app_btn_show %></td>
+            <td><%= link_to 'Edit', edit_premio_path(premio), class: helper_app_btn_edit %></td>
+            <td><%= link_to 'Destroy', premio, method: :delete, data: {confirm: 'Are you sure?'},
+                            class: helper_app_btn_destroy %></td>
           </tr>
       <% end %>
   </tbody>
 
 
 </table>
-
-<br/>
-
-<%= link_to 'New Premio', new_premio_path %>

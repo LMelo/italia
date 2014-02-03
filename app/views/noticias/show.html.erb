@@ -12,7 +12,7 @@
     </div>
     <div class="col-md-4 column">
       <% if @noticia.foto.exists? %>
-        <%= image_tag(@noticia.foto.url(:thumb)) %>
+        <%= image_tag(@noticia.foto.url, height: "250px", width: "250px") %>
       <% end %>
     </div>
   </div>
@@ -42,5 +42,5 @@
 
 
 
-<%= link_to 'Edit', edit_noticia_path(@noticia) %> |
-<%= link_to 'Back', noticias_path %>
+<%= link_to 'Edit', edit_noticia_path(@noticia), class: helper_app_btn_edit %> |
+<%= link_to 'Back', noticias_path, class: helper_app_btn_back %>
