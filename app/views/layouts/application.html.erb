@@ -38,12 +38,30 @@
             <li><a class="navbar-brand" href="#">Edital/Regulamento</a></li>
             <li><a class="navbar-brand" href="#">Fotos</a></li>
             <li><a class="navbar-brand" href="#">Dúvidas/Perguntas</a></li>
-            <li><%= link_to "Noticias", noticias_path, class: "navbar-brand" %></li>
-            <li><%= link_to "Premios", premios_path, class: "navbar-brand" %></li>
+            <li></li>
+            <li></li>
           </ul>
         </div>
 
       </nav>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row clearfix">
+      <div class="col-md-12 column">
+        <ul class="breadcrumb">
+          <li>
+            <p>Administração >> </p>
+          </li>
+          <li>
+            <%= link_to "Premios", premios_path %> <span class="divider">/</span>
+          </li>
+          <li>
+            <%= link_to "Noticias", noticias_path %> <span class="divider">/</span>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 

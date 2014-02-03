@@ -2,7 +2,7 @@ class NoticiasController < ApplicationController
   # GET /noticias
   # GET /noticias.json
   def index
-    @noticias = Noticia.all
+    @noticias = Noticia.order_by_data_publicacao.all
 
     respond_to do |format|
       format.html # index.html.erb
