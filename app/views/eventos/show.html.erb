@@ -1,0 +1,8 @@
+<h2>Evento: <%= @evento.nome %></h2>
+<h4>Data: <%= @evento.data_evento %></h4>
+<hr/>
+
+<%= helper_galeria_fotos_por_evento(Galeria.where_evento_id(@evento.id)) %>
+
+<%= link_to 'Edit', edit_evento_path(@evento) %> |
+<%= link_to 'Back', eventos_path %>

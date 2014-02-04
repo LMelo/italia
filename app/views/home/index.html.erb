@@ -2,4 +2,7 @@
 
 <h1>Notícias Recentes</h1>
 <%= helper_noticia_list_thumbnail(Noticia.order_by_data_publicacao.limit(3)) %>
-<hr/>
+<br/>
+
+<h1>Evento</h1>
+<%= helper_evento_list_box(Evento.order_by_data_evento_desc.limit(3)) %>

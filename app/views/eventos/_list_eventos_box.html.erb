@@ -1,5 +1,5 @@
 <% cont = 0 %>
-<% noticias_lista.each do |noticia| %>
+<% evento_lista.each do |evento| %>
 
     <% row_open = cont == 0 %>
     <% row_end = cont == 2 %>
@@ -8,7 +8,7 @@
         <div class="row">
     <% end %>
 
-    <%= helper_noticia_show_thumbnail(noticia) %>
+    <%= helper_evento_box(evento) %>
 
     <% if row_end %>
         </div>

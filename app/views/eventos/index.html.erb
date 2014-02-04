@@ -1,0 +1,29 @@
+<h1>Listing eventos</h1>
+
+<%= link_to 'New Evento', new_evento_path, class: helper_app_btn_new %>
+<br/>
+<table class="table table-hover table-condensed">
+  <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Data evento</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <% @eventos.each do |evento| %>
+          <tr>
+            <td><%= evento.nome %></td>
+            <td><%= evento.data_evento %></td>
+            <td><%= link_to 'Show', evento, class: helper_app_btn_show %></td>
+            <td><%= link_to 'Edit', edit_evento_path(evento), class: helper_app_btn_edit %></td>
+            <td><%= link_to 'Destroy', evento, method: :delete, data: { confirm: 'Are you sure?' },
+                            class: helper_app_btn_destroy %></td>
+          </tr>
+      <% end %>
+  </tbody>
+</table>
+
+

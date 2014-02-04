@@ -1,4 +1,18 @@
 Italia::Application.routes.draw do
+  resources :eventos do
+    collection do
+      get "listagem"
+    end
+  end
+
+
+  resources :galerias do
+    collection do
+      get "fotos"
+    end
+  end
+
+
   resources :regulamentos
 
 

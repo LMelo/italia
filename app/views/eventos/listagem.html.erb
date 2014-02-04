@@ -1,0 +1,4 @@
+<% todos_eventos = Evento.order_by_data_evento_desc.all %>
+<h2>Eventos</h2>
+<hr/>
+<%= helper_evento_list_box(todos_eventos) %>

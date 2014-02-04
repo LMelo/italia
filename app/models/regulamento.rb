@@ -8,7 +8,7 @@ class Regulamento < ActiveRecord::Base
   scope :next_record, lambda {|id| where("id > ?", id).limit(1)}
   scope :maior_secao, lambda {|pai_id| where("regulamento_id = ?", pai_id).order("secao DESC").limit(1)}
 
-  def get_maior_secao(regulamento_pai_id)
+  def self.get_maior_secao(regulamento_pai_id)
     maior_secao = 1
     max_sec = Regulamento.maior_secao(regulamento_pai_id)
     max_sec.each do |ms|

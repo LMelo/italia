@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Titulo:</b>
+  <%= @galeria.titulo %>
+</p>
+
+<p>
+  <b>Foto</b>
+  <%= image_tag(@galeria.file.url) %>
+</p>
+
+
+<%= link_to 'Edit', edit_galeria_path(@galeria), class: helper_app_btn_edit %> |
+<%= link_to 'Back', galerias_path, class: helper_app_btn_back %>

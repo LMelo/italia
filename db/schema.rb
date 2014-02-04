@@ -11,7 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140131171909) do
+ActiveRecord::Schema.define(:version => 20140204144500) do
+
+  create_table "eventos", :force => true do |t|
+    t.string   "nome"
+    t.date     "data_evento"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "galerias", :force => true do |t|
+    t.string   "titulo"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
+    t.integer  "evento_id"
+  end
 
   create_table "noticias", :force => true do |t|
     t.string   "titulo"
@@ -41,5 +59,16 @@ ActiveRecord::Schema.define(:version => 20140131171909) do
   end
 
   add_index "premios", ["ativo"], :name => "index_premios_on_ativo"
+
+  create_table "regulamentos", :force => true do |t|
+    t.integer  "regulamento_id"
+    t.text     "descricao"
+    t.integer  "secao"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "regulamentos", ["regulamento_id"], :name => "index_regulamentos_on_regulamento_id"
+  add_index "regulamentos", ["secao"], :name => "index_regulamentos_on_secao"
 
 end

@@ -1,0 +1,24 @@
+<%= simple_form_for(@galeria, :html => { :multipart => true }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :titulo %>
+    <div class="control-group">
+      <%= f.label :evento_id %>
+      <div class="controls">
+        <%= f.collection_select(:evento_id, Evento.all, :id, :nome, :prompt => "--Selecione--") %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :file %>
+      <div class="controls">
+        <%= f.file_field :file %>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+  <br/>
+<% end %>
