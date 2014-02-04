@@ -3,7 +3,7 @@ class Galeria < ActiveRecord::Base
 
   belongs_to :evento, class_name: "Evento", foreign_key: :evento_id
 
-  has_attached_file :file, styles: { medium: "300x300>", thumb: "100x100" }
+  has_attached_file :file, styles: { medium: "300x300>", thumbnail: "100x100" }
 
   validates_presence_of :evento
 

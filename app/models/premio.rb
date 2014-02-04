@@ -1,7 +1,7 @@
 class Premio < ActiveRecord::Base
   attr_accessible :descricao, :resumo, :titulo, :ativo, :foto
 
-  has_attached_file :foto, styles: { medium: "300x300>", thumb: "100x100<" }
+  has_attached_file :foto, styles: { medium: "300x300>", thumbnail: "100x100<" }
 
   # INICIALIZACOES
   after_initialize :default_values, :if => :new_record?

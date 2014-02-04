@@ -3,7 +3,7 @@ class Noticia < ActiveRecord::Base
 
   attr_accessible :ativo, :data_publicacao, :resumo, :titulo, :foto, :conteudo
 
-  has_attached_file :foto, styles: { medium: "300x300>", thumb: "150x150<" }
+  has_attached_file :foto, styles: { medium: "300x300>", thumbnail: "150x150<" }
 
   # VALIDACOES
   validates_presence_of :titulo, :conteudo, :data_publicacao

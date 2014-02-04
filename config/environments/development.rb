@@ -36,4 +36,5 @@ Italia::Application.configure do
   config.assets.debug = true
 
   Paperclip.options[:command_path] = 'C:\Program Files\ImageMagick-6.8.8-Q8'
+
 end
