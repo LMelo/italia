@@ -1,0 +1,19 @@
+<%= simple_form_for(@regulamento) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :secao %>
+    <div class="control-group">
+      <%= f.label :regulamento_id, label: "Regulamento Pai" %>
+      <div class="controls">
+        <%= f.collection_select(:regulamento_id, Regulamento.all, :id, :secao, prompt: "--Selecione--", :include_blank => true) %>
+      </div>
+    </div>
+    <%= f.input :descricao %>
+  </div>
+  <br/>
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+  <br/>
+<% end %>

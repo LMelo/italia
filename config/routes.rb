@@ -1,4 +1,7 @@
 Italia::Application.routes.draw do
+  resources :regulamentos
+
+
   resources :premios do
     collection do
       get "descricao"

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  regulamento_id: 1
+  descricao: MyText
+  secao: 1
+
+two:
+  regulamento_id: 1
+  descricao: MyText
+  secao: 1
