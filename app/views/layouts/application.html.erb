@@ -39,8 +39,13 @@
             <li><a class="navbar-brand" href="/eventos/listagem">Eventos</a></li>
             <li><a class="navbar-brand" href="/galerias/fotos">Galeria</a></li>
             <li><a class="navbar-brand" href="#">Dúvidas/Perguntas</a></li>
-            <li><a class="navbar-brand" href="#"><img src="/assets/login_white.png" height="32px" width="32px"
-                                                      alt="Entrar" title="Entrar"></a></li>
+            <li>
+              <%= link_to \
+                  image_tag("/assets/login_white.png", height: "32px", width: "32px", title: "Entrar", alt: "Login"), \
+                  "#", \
+                  class: "navbar-brand"
+              %>
+            </li>
           </ul>
         </div>
 
@@ -62,7 +67,10 @@
         </ul>
       </div>
       <div class="col-md-2 column">
-        <a href="#"><img src="/assets/logout_black.png" height="48px" width="48px" alt="Sair" title="Sair"></a>
+        <%= link_to \
+            image_tag("/assets/logout_black.png", height: "48px", width: "48px", title: "Sair", alt: "Logout"), \
+            "#"
+        %>
       </div>
     </div>
   </div>

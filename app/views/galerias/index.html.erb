@@ -1,6 +1,6 @@
 <h1>Listing galerias</h1>
 
-<%= link_to 'New Galeria', new_galeria_path, class: helper_app_btn_new %>
+<%= link_to helper_app_btn_title_new, new_galeria_path, class: helper_app_btn_icon_new %>
 <br/>
 <table class="table table-hover table-condensed">
   <thead>
@@ -17,10 +17,11 @@
           <tr>
             <td><%= galeria.titulo %></td>
             <td><%= helper_evento_name(galeria.evento_id) %></td>
-            <td><%= link_to 'Show', galeria, class: helper_app_btn_show %></td>
-            <td><%= link_to 'Edit', edit_galeria_path(galeria), class: helper_app_btn_edit %></td>
-            <td><%= link_to 'Destroy', galeria, method: :delete, data: { confirm: 'Are you sure?' },
-                            class: helper_app_btn_destroy %></td>
+            <td><%= link_to '', galeria, class: helper_app_btn_icon_show_row, title: helper_app_btn_title_show %></td>
+            <td><%= link_to '', edit_galeria_path(galeria), class: helper_app_btn_icon_edit_row,
+                            title: helper_app_btn_title_edit %></td>
+            <td><%= link_to '', galeria, method: :delete, data: { confirm: 'Are you sure?' },
+                            class: helper_app_btn_icon_destroy, title: helper_app_btn_title_destroy %></td>
           </tr>
       <% end %>
   </tbody>

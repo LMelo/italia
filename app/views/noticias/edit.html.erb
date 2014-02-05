@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @noticia, class: helper_app_btn_show %> |
-<%= link_to 'Back', noticias_path, class: helper_app_btn_back %>
+<%= link_to helper_app_btn_title_show, @noticia, class: helper_app_btn_icon_show %> |
+<%= link_to helper_app_btn_title_back, noticias_path, class: helper_app_btn_icon_back %>

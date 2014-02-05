@@ -1,6 +1,6 @@
 <h1>Listing eventos</h1>
 
-<%= link_to 'New Evento', new_evento_path, class: helper_app_btn_new %>
+<%= link_to helper_app_btn_title_new, new_evento_path, class: helper_app_btn_icon_new %>
 <br/>
 <table class="table table-hover table-condensed">
   <thead>
@@ -17,10 +17,11 @@
           <tr>
             <td><%= evento.nome %></td>
             <td><%= evento.data_evento %></td>
-            <td><%= link_to 'Show', evento, class: helper_app_btn_show %></td>
-            <td><%= link_to 'Edit', edit_evento_path(evento), class: helper_app_btn_edit %></td>
-            <td><%= link_to 'Destroy', evento, method: :delete, data: { confirm: 'Are you sure?' },
-                            class: helper_app_btn_destroy %></td>
+            <td><%= link_to '', evento, class: helper_app_btn_icon_show_row, title: helper_app_btn_title_show %></td>
+            <td><%= link_to '', edit_evento_path(evento), class: helper_app_btn_icon_edit_row,
+                            title: helper_app_btn_title_edit %></td>
+            <td><%= link_to '', evento, method: :delete, data: { confirm: 'Are you sure?' },
+                            class: helper_app_btn_icon_destroy, title: helper_app_btn_title_destroy %></td>
           </tr>
       <% end %>
   </tbody>

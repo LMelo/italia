@@ -1,4 +1,4 @@
 <%= helper_premio_detalhe(@premio, 250, 250) %>
 
-<%= link_to 'Edit', edit_premio_path(@premio), class: helper_app_btn_edit %> |
-<%= link_to 'Back', premios_path, class: helper_app_btn_back %>
+<%= link_to helper_app_btn_title_edit, edit_premio_path(@premio), class: helper_app_btn_icon_edit %> |
+<%= link_to helper_app_btn_title_back, premios_path, class: helper_app_btn_icon_back %>
