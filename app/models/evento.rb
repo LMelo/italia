@@ -1,5 +1,5 @@
 class Evento < ActiveRecord::Base
-  attr_accessible :data_evento, :nome
+  attr_accessible :data_evento, :nome, :subtitulo, :descricao_evento
 
   has_many :galerias, class_name: "Galeria", foreign_key: "evento_id"
 
