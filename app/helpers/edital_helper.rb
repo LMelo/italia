@@ -1,0 +1,2 @@
+module EditalHelper
+end

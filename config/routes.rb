@@ -1,4 +1,6 @@
 Italia::Application.routes.draw do
+  get "edital/regulamento"
+
   resources :eventos do
     collection do
       get "listagem"

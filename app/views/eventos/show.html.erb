@@ -4,5 +4,5 @@
 
 <%= helper_galeria_fotos_por_evento(Galeria.where_evento_id(@evento.id)) %>
 
-<%= link_to 'Edit', edit_evento_path(@evento) %> |
-<%= link_to 'Back', eventos_path %>
+<%= link_to 'Edit', edit_evento_path(@evento), class: helper_app_btn_edit %> |
+<%= link_to 'Back', eventos_path, class: helper_app_btn_back %>
