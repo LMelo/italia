@@ -33,10 +33,15 @@
 
 <div>
   <ul class="pager pagination-lg">
-    <li><%= link_to("Última", @noticia.ultima_noticia) if @noticia.proxima_noticia %></li>
-    <li><%= link_to("< Próxima", @noticia.proxima_noticia) if @noticia.proxima_noticia %></li>
-    <li><%= link_to("Anterior >", @noticia.anterior_noticia) if @noticia.anterior_noticia %></li>
-    <li><%= link_to("Primeira", @noticia.primeira_noticia)  if @noticia.anterior_noticia %></li>
+
+    <% proxima_noticia = @noticia.proxima_noticia %>
+    <% anterior_noticia = @noticia.anterior_noticia %>
+
+    <li><%= link_to("Última Notícia", @noticia.ultima_noticia) if proxima_noticia %></li>
+    <li><%= link_to("< Próxima Notícia", proxima_noticia) if proxima_noticia %></li>
+    <li><%= link_to("Notícia Anterior >", anterior_noticia) if anterior_noticia %></li>
+    <li><%= link_to("Primeira Notícia", @noticia.primeira_noticia)  if anterior_noticia %></li>
+
   </ul>
 </div>
 

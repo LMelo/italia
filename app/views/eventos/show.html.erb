@@ -19,5 +19,19 @@
 
 <br/>
 
+<div class="">
+  <ul class="pager pagination-lg">
+
+    <% proximo_evento = @evento.proximo_evento %>
+    <% anterior_evento = @evento.anterior_evento %>
+
+    <li><%= link_to("Último Evento", @evento.ultimo_evento) if proximo_evento %></li>
+    <li><%= link_to("< Próximo Evento", proximo_evento) if proximo_evento %></li>
+    <li><%= link_to("Evento Anterior >", anterior_evento) if anterior_evento %></li>
+    <li><%= link_to("Primeiro Evento", @evento.primeiro_evento)  if anterior_evento %></li>
+
+  </ul>
+</div>
+
 <%= link_to helper_app_btn_title_edit, edit_evento_path(@evento), class: helper_app_btn_icon_edit %> |
 <%= link_to helper_app_btn_title_back, eventos_path, class: helper_app_btn_icon_back %>

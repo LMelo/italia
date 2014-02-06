@@ -7,6 +7,23 @@ class Evento < ActiveRecord::Base
   validates_presence_of :data_evento, :nome, :descricao_evento
 
   # SCOPES
-  scope :order_by_data_evento_desc, order("data_evento DESC")
+  scope :order_by_data_evento_desc, order("data_evento, id DESC")
+
+  def primeiro_evento
+    self.class.first
+  end
+
+  def anterior_evento
+    self.class.first(conditions: ["id < ?", self.id], order: "data_evento DESC")
+  end
+
+  def proximo_evento
+    self.class.first(conditions: ["id > ?", self.id], order: "data_evento DESC")
+  end
+
+  def ultimo_evento
+    self.class.last
+  end
+
 
 end
