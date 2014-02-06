@@ -3,6 +3,9 @@ class Evento < ActiveRecord::Base
 
   has_many :galerias, class_name: "Galeria", foreign_key: "evento_id"
 
+  # VALIDACOES
+  validates_presence_of :data_evento, :nome, :descricao_evento
+
   # SCOPES
   scope :order_by_data_evento_desc, order("data_evento DESC")
 

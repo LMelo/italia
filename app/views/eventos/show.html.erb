@@ -1,11 +1,23 @@
 <h2><%= @evento.nome %></h2>
-<h3><%= @evento.subtitulo %></h3>
-<h4>Data: <%= @evento.data_evento %></h4>
-<br/>
-<%= @evento.descricao_evento %>
 <hr/>
-Veja as fotos do evento:
-<%= helper_galeria_fotos_por_evento(Galeria.where_evento_id(@evento.id)) %>
+<em class="muted">
+  <p><%= @evento.subtitulo %></p>
+  <p>Data: <%= @evento.data_evento %></p>
+</em>
+<br/>
+<p class="well">
+  <% (@evento.descricao_evento || "Nenhuma descrição informada").split("\n").each do |t| %>
+      <%= t %><br/>
+  <% end %>
+</p>
+
+<% galeria_por_evento = Galeria.where_evento_id(@evento.id) %>
+<% if galeria_por_evento.size > 0 %>
+    <h4>Veja as fotos do evento:</h4>
+    <%= helper_galeria_fotos_por_evento(galeria_por_evento) %>
+<% end %>
+
+<br/>
 
 <%= link_to helper_app_btn_title_edit, edit_evento_path(@evento), class: helper_app_btn_icon_edit %> |
 <%= link_to helper_app_btn_title_back, eventos_path, class: helper_app_btn_icon_back %>
