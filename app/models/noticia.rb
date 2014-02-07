@@ -1,6 +1,10 @@
 # encoding: utf-8
 class Noticia < ActiveRecord::Base
 
+  extend FriendlyId
+
+  friendly_id :titulo
+
   attr_accessible :ativo, :data_publicacao, :resumo, :titulo, :foto, :conteudo
 
   has_attached_file :foto, styles: { medium: "300x300>", thumbnail: "150x150<" }

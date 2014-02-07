@@ -1,4 +1,8 @@
 class Evento < ActiveRecord::Base
+  extend FriendlyId
+
+  friendly_id :nome
+
   attr_accessible :data_evento, :nome, :subtitulo, :descricao_evento
 
   has_many :galerias, class_name: "Galeria", foreign_key: "evento_id"
@@ -14,11 +18,11 @@ class Evento < ActiveRecord::Base
   end
 
   def anterior_evento
-    self.class.first(conditions: ["id < ?", self.id], order: "data_evento DESC")
+    self.class.first(conditions: ["id < ?", self.id], order: "data_evento, id DESC")
   end
 
   def proximo_evento
-    self.class.first(conditions: ["id > ?", self.id], order: "data_evento DESC")
+    self.class.first(conditions: ["id > ?", self.id], order: "data_evento, id DESC")
   end
 
   def ultimo_evento
